@@ -11,13 +11,13 @@ variable "max_session_duration" {
 
 variable "subjects" {
   description = "A map of GitHub orgs/repositories"
-  type        = map(string)
-  default     = {}
+  type        = list(string)
+  default     = []
 }
 
 variable "policies" {
   description = "A map of IAM role names to IAM policy names"
-  type        = map(list(string))
+  type        = map(string)
   default     = {}
 }
 
